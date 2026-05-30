@@ -1,7 +1,13 @@
 import streamlit as st
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_ollama import OllamaLLM
+from langchain_groq import ChatGroq
+import os
+
+llm = ChatGroq(
+    model="llama3-8b-8192",
+    api_key=os.environ["GROQ_API_KEY"]
+)
 
 st.title("Telangana Tourism RAG Chatbot")
 
