@@ -8,8 +8,9 @@ st.title("🏛️ Telangana Tourism RAG Chatbot")
 
 # Load Groq LLM
 llm = ChatGroq(
-    model="llama3-8b-8192",
+    model="llama-3.1-8b-instant",
     api_key=st.secrets["GROQ_API_KEY"]
+)
 )
 
 # Load Embedding Model
